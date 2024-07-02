@@ -1,0 +1,44 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.formatOnSave": true,
+        // "python.linting.enabled": true,
+        // "python.linting.flake8Enabled": true,
+        // "python.analysis.indexing": true,
+        // "python.analysis.autoSearchPaths": true,
+        // "python.analysis.diagnosticMode": "workspace"
+    },
+    "[django-html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html",
+        "html": "html"
+    },
+    "python.testing.pytestEnabled": true,
+    "files.associations": {
+        "**/templates/**/*.html": "django-html",
+        "**/templates/**/*": "django-txt"
+    },
+    "launch": {
+        "configurations": [
+            {
+                "name": "Django",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${workspaceFolder}/manage_dev.py",
+                "args": [
+                    "runserver"
+                ],
+                "django": true
+            }
+        ]
+    }
+}
