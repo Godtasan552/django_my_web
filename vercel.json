@@ -20,7 +20,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "deploy_demo/wsgi.py"
+            "dest": "my_web/wsgi.py"
         }
     ]
 }
