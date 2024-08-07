@@ -1,1 +1,119 @@
-{% extends base.thml %}
+{% extends "base.html" %}
+<!--]ล้มมม-->
+
+{% comment %} {% block content %}
+<h1>หน้าทดสอบ</h1>
+
+<div class="container">
+  <h1>หน้าทดสอบ</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+  {% for i in list%}
+  <tr>
+    <th scope="row">{{forloop.counter}}</th>
+    <div class="card" style="width: 18rem;">
+      <img src="https://i.pinimg.com/564x/12/0a/de/120ade263efb9b4e7685c0585d4c1c58.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </tr>
+  {% endfor %}
+      </tr>
+    </tbody>
+  </table>
+
+  </div>
+{% endblock content %} {% endcomment %}
+
+
+
+<!--เท้นไม้ก่อน-->
+
+{% comment %} {% block content %}
+<style>
+  .card-img-top {
+    transition: transform 0.3s ease;
+  }
+  .card:hover .card-img-top {
+    transform: scale(1.1);
+  }
+  .card-overlay {
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    transition: background 0.3s ease;
+  }
+  .card:hover .card-overlay {
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 100%);
+  }
+</style>
+
+<div class="container py-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for i in list %}
+    <div class="col">
+      <div class="card h-100 shadow-sm border-0 overflow-hidden">
+        <div class="position-relative">
+          <img src="https://i.pinimg.com/736x/4c/44/40/4c44402de11a9b2a374663de98dd0ff8.jpg" class="card-img-top" alt="...">
+          <div class="position-absolute top-0 start-0 m-3">
+            <span class="badge bg-primary rounded-pill fs-6 px-3 py-2">{{forloop.counter}}</span>
+          </div>
+          <div class="card-img-overlay d-flex flex-column justify-content-end card-overlay">
+            <h5 class="card-title text-white mb-0">Card title</h5>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-primary">View</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+            </div>
+            <small class="text-muted">9 mins</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %} {% endcomment %}
+
+
+
+<!--ทำใหม่-->
+{% block content %}
+<div class="container py-5">
+  <div class="row row-cols-1 row-cols-md-3 row-cols-3-lg3 g-4">
+    {% for i in list %}
+      <div class="col">
+        <div class="card h-100 shadow-sm overflow-hidden">
+          <div class="position-relative">
+            <img src="https://i.pinimg.com/736x/4c/44/40/4c44402de11a9b2a374663de98dd0ff8.jpg" class="card-img-top" alt="...">
+            <div class="position-absolute top-0 start-0">
+              <span class="badge rounded-pill text-bg-primary">{{forloop.counter}}</span>
+            </div>
+            <div class="card-img-overlay d-flex flex-column justify-content-end card-overlay">
+              <h1 class="card-title text-white">Steak</h1>
+            </div>
+  
+          </div>
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <button type="button" class="btn btn-outline-primary">View</button>
+            <button type="button" class="btn btn-outline-secondary">Edit</button>
+  
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

@@ -13,3 +13,10 @@ def aboutPage(request):
 
 def contactPage(request):
     return render(request, 'contact.html')
+
+def testPage(request):
+    context = {}
+    lt =list(range(0,100))
+    context["list"] = lt
+    
+    return render(request, 'test.html',context)
