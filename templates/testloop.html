@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+<!---->
+{% block content %}
+<div class="container">
+  <h1>หน้าสำหรับทดสอบ</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in list %}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>Riw</td>
+        <td>Fiw</td>
+        <td>Jiw</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock content %}

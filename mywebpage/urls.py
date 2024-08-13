@@ -7,4 +7,5 @@ urlpatterns = [
     path('contact/', views.contactPage, name='contact'),
     path('test/', views.testPage, name='test-page'),
     path('color/', views.cardclrPage, name='cardcolor'),
+    path('loop/', views.testloopPage, name='teloop'),
 ]

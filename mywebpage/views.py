@@ -33,3 +33,11 @@ def cardclrPage(request):
         context = {'color': color}
 
     return render(request, 'card_color.html', context)
+
+
+def testloopPage(request):
+    context = {}
+    lt = list(range(0, 100))
+    context["list"] = lt
+
+    return render(request, 'testloop.html', context)
