@@ -14,22 +14,22 @@ def aboutPage(request):
 def contactPage(request):
     return render(request, 'contact.html')
 
+
 def testPage(request):
     context = {}
-    lt =list(range(0,100))
+    lt = list(range(0, 100))
     context["list"] = lt
-    
-    return render(request, 'test.html',context)
+
+    return render(request, 'test.html', context)
+
 
 def cardclrPage(request):
     context = {
         'color': 'all',
-    }  
-    
-    if request.method == "GET":
+    }
+
+    if request.method == "GET" and request.GET.get('color') != None:
         color = request.GET.get('color')
         context = {'color': color}
 
     return render(request, 'card_color.html', context)
-
-
