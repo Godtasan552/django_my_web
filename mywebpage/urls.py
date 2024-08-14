@@ -8,4 +8,5 @@ urlpatterns = [
     path('test/', views.testPage, name='test-page'),
     path('color/', views.cardclrPage, name='cardcolor'),
     path('loop/', views.testloopPage, name='teloop'),
+    path('from/', views.from_testPage, name='from_ts')
 ]

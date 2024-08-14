@@ -41,3 +41,19 @@ def testloopPage(request):
     context["list"] = lt
 
     return render(request, 'testloop.html', context)
+
+def from_testPage(request):
+    
+    context ={
+    "email":"",
+    "password":""
+    }
+    
+    if request.method == "GET":
+        email = request.GET.get('email')
+        password = request.GET.get('my_password')
+        context = {
+            "email":email,
+            "password":password
+        }
+    return render(request, 'from.html',context)
